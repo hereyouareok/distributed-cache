@@ -16,4 +16,13 @@ public class User implements Serializable {
     private  String id;
     private  String name;
     private  Date birthday;
+
+    public User() {
+    }
+
+    public User(String id, String name, Date birthday) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+    }
 }

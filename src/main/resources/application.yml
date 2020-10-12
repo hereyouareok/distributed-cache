@@ -1,13 +1,15 @@
 spring:
   redis:
-    host: localhost
-    port: 6379
-    database: 0
+    cluster:
+      nodes: 192.168.182.135:7000,192.168.182.135:7001,192.168.182.135:7002,192.168.182.135:7003,192.168.182.135:7004,192.168.182.135:7005,192.168.182.135:7006
+  #    sentinel:
+#      master: mynaster
+#      nodes: 192.168.182.135:26379
   datasource:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/sis?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/xxx?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
     type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
   mapper-locations: classpath:mapper/*.xml
